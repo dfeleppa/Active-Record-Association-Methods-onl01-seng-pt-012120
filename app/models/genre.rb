@@ -11,6 +11,6 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-     self.artists.all
+     self.songs.map { |song| song.artist.name }
   end
 end
