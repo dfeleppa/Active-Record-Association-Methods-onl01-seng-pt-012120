@@ -3,7 +3,7 @@ class Artist < ActiveRecord::Base
   has_many :genres, through: :songs
 
   def get_genre_of_first_song
-    Genre.Songwhere("number_of_stars > ?", 3)
+    Genre.where("number_of_stars > ?", 3)
   end
 
   def song_count
